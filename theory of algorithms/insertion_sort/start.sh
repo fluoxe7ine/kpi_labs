@@ -1,3 +1,3 @@
 #!/bin/bash
-g++ cypher.cpp
+g++ sort.cpp
 ./a.out
