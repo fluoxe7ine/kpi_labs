@@ -19,20 +19,20 @@ string generatingKey(string msg, string key) {
 
 string encode(string msg, string key) {
   string result = "";
-  int cypherChar;
+  int cipherChar;
   for (int i = 0; i < msg.length(); i++) {
-    cypherChar = (alphabet.find(msg[i]) + alphabet.find(key[i])) % alphabet.length();
-    result += alphabet[cypherChar];
+    cipherChar = (alphabet.find(msg[i]) + alphabet.find(key[i])) % alphabet.length();
+    result += alphabet[cipherChar];
   }
   return result;
 }
 
 string decode(string msg, string key) {
   string result = "";
-  int decypherChar;
+  int decipherChar;
   for (int i = 0; i < msg.length(); i++) {
-    decypherChar = (alphabet.find(msg[i]) + alphabet.length() - alphabet.find(key[i])) % alphabet.length();
-    result += alphabet[decypherChar];
+    decipherChar = (alphabet.find(msg[i]) + alphabet.length() - alphabet.find(key[i])) % alphabet.length();
+    result += alphabet[decipherChar];
   }
   return result;
 }
