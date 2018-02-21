@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int solution(int number) {
 		int sum = 0;
