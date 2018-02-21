@@ -18,6 +18,6 @@ int main(int argc, char const *argv[]) {
 	char arr1[] = { 'a','b','c','d','f' };
   char arr2[] = { 'O','Q','R','S' };
 
-	printf("%c\n", findMissingLetter(arr1, 5));
+	printf("%c\n", findMissingLetter(arr2, 4));
 	return 0;
 }

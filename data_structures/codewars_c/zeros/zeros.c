@@ -17,6 +17,6 @@ int count_zeros_n_double_fact(int n)
 }
 
 int main(int argc, char const *argv[]) {
-	printf("%d\n", count_zeros_n_double_fact(8));
+	printf("%d\n", count_zeros_n_double_fact(30));
 	return 0;
 }

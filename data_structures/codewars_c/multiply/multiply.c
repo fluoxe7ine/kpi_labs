@@ -9,6 +9,6 @@ int solution(int number) {
 }
 
 int main(int argc, char const *argv[]) {
-  solution(10);
+  printf("%d\n", solution(10));
   return 0;
 }
