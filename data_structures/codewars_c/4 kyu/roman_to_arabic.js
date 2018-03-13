@@ -13,10 +13,10 @@ const solution = (roman) => {
   for (let i = 0; i < roman.length; i++) {
     if (objectValue(roman[i]) < objectValue(roman[i+1])) {
       res += objectValue(roman[i+1]) - objectValue(roman[i]);
-      i++
+      i++;
     } else res += objectValue(roman[i]);
   }
   return res;
 }
 
-console.log(solution('IX'));
+console.log(solution('XXI'));
