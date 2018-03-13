@@ -4,7 +4,6 @@
 int count_zeros_n_double_fact(int n)
 {
 		int res = 0;
-		int i = 0;
 		if ((n % 2) != 0) return res; else
  		{
 			n /= 2;
