@@ -48,7 +48,7 @@ switch (result.length) {
   case 4:
     mainStr = `${result[0]}, ${result[1]}, ${result[2]} and ${result[3]}`;
     break;
-    
+
   case 5:
     mainStr = `${result[0]}, ${result[1]}, ${result[2]}, ${result[3]} and ${result[4]}`;
     break;
