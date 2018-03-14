@@ -13,114 +13,29 @@ string solution (int number) {
     result.append("M");
   }
 
+  string hundreds[9] = {"C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC","CM"};
+
   //hundreds
   temp_value = number / 100;
-  switch (temp_value) {
-    case 9: {
-      result.append("CM");
-      break;
-    }
-    case 6:
-    case 7:
-    case 8: {
-      result.append("D");
-      for (int i = 0; i < temp_value - 5; i++) {
-        result.append("C");
-      }
-      break;
-    }
-    case 5: {
-      result.append("D");
-      break;
-    }
-    case 4: {
-      result.append("CD");
-      break;
-    }
-    case 1:
-    case 2:
-    case 3: {
-      for (int i = 0; i < temp_value; i++) {
-        result.append("C");
-      }
-      break;
-    }
-  }
+  if (temp_value > 0) result.append(hundreds[temp_value - 1]);
   number -= temp_value * 100;
 
   //decades
   temp_value = number / 10;
-  switch (temp_value) {
-    case 9: {
-      result.append("XC");
-      break;
-    }
-    case 6:
-    case 7:
-    case 8: {
-      result.append("L");
-      for (int i = 0; i < temp_value - 5; i++) {
-        result.append("X");
-      }
-      break;
-    }
-    case 5: {
-      result.append("L");
-      break;
-    }
-    case 4: {
-      result.append("XL");
-      break;
-    }
-    case 1:
-    case 2:
-    case 3: {
-      for (int i = 0; i < temp_value; i++) {
-        result.append("X");
-      }
-      break;
-    }
-  }
+  string decades[9] = {"X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+  if (temp_value > 0) result.append(decades[temp_value - 1]);
   number -= temp_value * 10;
 
-  //decades
+  //numbers
   temp_value = number;
-  switch (temp_value) {
-    case 9: {
-      result.append("IX");
-      break;
-    }
-    case 6:
-    case 7:
-    case 8: {
-      result.append("V");
-      for (int i = 0; i < temp_value - 5; i++) {
-        result.append("I");
-      }
-      break;
-    }
-    case 5: {
-      result.append("V");
-      break;
-    }
-    case 4: {
-      result.append("IV");
-      break;
-    }
-    case 1:
-    case 2:
-    case 3: {
-      for (int i = 0; i < temp_value; i++) {
-        result.append("I");
-      }
-      break;
-    }
-  }
+  string numbers[9] = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+  if (temp_value > 0) result.append(numbers[temp_value - 1]);
+
   return result;
 }
 
 int main(int argc, char const *argv[]) {
-  cout << solution(952) << endl;
+  cout << solution(52) << endl;
   cout << solution(3052) << endl;
   cout << solution(752) << endl;
   cout << solution(652) << endl;
