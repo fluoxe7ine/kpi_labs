@@ -89,8 +89,6 @@ int main(int argc, char* argv[]){
   }
 
   fout << x << endl;
-  swap(outputData[0][0], outputData[1][0]);
-  swap(outputData[0][1], outputData[1][1]);
 
   for (int i = 0; i < u - 1; i++){
     for (int j = 0; j < u - 1; j++){
