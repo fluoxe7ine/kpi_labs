@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 struct BstNode {
@@ -108,7 +109,7 @@ int main() {
       nodeData = (rand() % 199) - 99;
       root = Insert(root, nodeData);
     }
-  }  else {cout << "Invalid input"; return 0;};
+  } else {cout << "Invalid input"; return 0;};
 
   PrintOut(root);
   cout << endl;
@@ -117,13 +118,14 @@ int main() {
   cout << "Enter N: ";
   cin >> n;
 
-  for (int i = -99; i < n; i++){
-    while(Search(root, i) == true) {
-      root = DeleteNode(root, i);
-      int nodeData;
-      nodeData = (rand() % (n+1)) + n;
-      root = Insert(root, nodeData);
-    }
+  for (int i = -99; i <= 99; i++){
+		int num;
+		num = abs(i / 10 + i % 10);
+
+		while((num < n)&&(Search(root,i)==true)){
+			root = DeleteNode(root,i);
+			root = Insert(root, n);
+		}
   }
 
   PrintOut(root);
