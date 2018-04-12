@@ -125,6 +125,6 @@ int main() {
       root = Insert(root, nodeData);
     }
   }
-
   PrintOut(root);
+	cout << endl;
 }

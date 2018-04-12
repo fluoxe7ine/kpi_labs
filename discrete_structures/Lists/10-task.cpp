@@ -121,12 +121,13 @@ int main() {
   for (int i = -99; i <= 99; i++){
 		int num;
 		num = abs(i / 10 + i % 10);
-
-		while((num < n)&&(Search(root,i)==true)){
-			root = DeleteNode(root,i);
-			root = Insert(root, n);
+		for (int j = 0; j < 15; j++){
+			if(((num < n)&&(Search(root,i)==true))){
+				root = DeleteNode(root,i);
+				root = Insert(root, n);
+			}
 		}
   }
 
-  PrintOut(root);
+PrintOut(root);
 }
