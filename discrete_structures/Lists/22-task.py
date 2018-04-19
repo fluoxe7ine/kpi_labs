@@ -36,12 +36,11 @@ def gapInsertionSort(a, start, gap):
 
 #generating sorted list
 for i in range(0,100,10):
-    A.append(i)
+    A.append(float(i))
 
 #generating random number bigger than left and smaller than right element
 for i in range(0, len(A) - 1):
-    print (A[i], A[i+1])
-    A.append(random.randint(A[i] + 1, A[i+1] - 1))
+    A.append((A[i]+A[i+1])/2)
 
 B = A #copying list A
 A = quicksort(A)
