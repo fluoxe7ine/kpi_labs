@@ -64,6 +64,18 @@ BstNode* DeleteNode(BstNode* root, int data){
 	return root;
 }
 
+void print_Tree(BstNode* root,int level)
+{
+    if(root){
+        print_Tree(root->right,level + 1);
+        for (int i = 0;i < level;i++){
+            cout << "        ";
+        }
+        cout << root->data << " " << endl;
+        print_Tree(root->left,level + 1);
+    }
+}
+
 //printing out the binary tree
 void PrintOut(BstNode* root) {
   if(root == NULL) {
@@ -127,4 +139,5 @@ int main() {
   }
   PrintOut(root);
 	cout << endl;
+	print_Tree(root, 0);
 }

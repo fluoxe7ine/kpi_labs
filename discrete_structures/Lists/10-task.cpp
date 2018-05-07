@@ -75,6 +75,18 @@ void PrintOut(BstNode* root) {
   PrintOut(root->right);
 }
 
+void print_Tree(BstNode* root,int level)
+{
+    if(root){
+        print_Tree(root->right,level + 1);
+        for (int i = 0;i < level;i++){
+            cout << "        ";
+        }
+        cout << root->data << " " << endl;
+        print_Tree(root->left,level + 1);
+    }
+}
+
 bool Search(BstNode* root, int data) {
 	if(root == NULL) {
 		return false;
@@ -130,4 +142,6 @@ int main() {
   }
 
 PrintOut(root);
+cout << endl;
+print_Tree(root, 0);
 }

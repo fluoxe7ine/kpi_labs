@@ -18,12 +18,7 @@ void test(int n); //test task for n nodes
 
 int main(int argc, char const *argv[]) {
   test(10);
-  test(100);
-  test(1000);
-  test(10000);
-  test(100000);
-  test(1000000);
-  test(10000000);
+  write();
   return 0;
 }
 
