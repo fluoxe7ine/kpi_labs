@@ -1,5 +1,5 @@
 fin = open('input.txt', 'r')
-fout = open('ip71_kozyriev_04_output.txt', 'w')
+fout = open('ip71_kozyriev_05_output.txt', 'w')
 
 #reading data from file and adding to array
 A = []
