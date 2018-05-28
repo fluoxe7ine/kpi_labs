@@ -53,8 +53,10 @@ for i in arr:
     else:
         sidePos.append(i)
 
-sideNeg = list(reversed(radixSort(sideNeg, max(sideNeg))))
-sidePos = radixSort(sidePos,max(sidePos))
+if len(sideNeg) > 0:
+    sideNeg = list(reversed(radixSort(sideNeg, max(sideNeg))))
+if len(sidePos) > 0:
+    sidePos = radixSort(sidePos,max(sidePos))
 
 for i in range(0,len(sideNeg)):
     sideNeg[i] = sideNeg[i] * (-1)
