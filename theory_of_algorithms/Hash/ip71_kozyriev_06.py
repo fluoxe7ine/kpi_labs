@@ -5,7 +5,7 @@ param = int(sys.argv[1])
 
 #reading data from file and adding to arrays
 fin = open('input.txt', 'r')
-fout = open('ip71_kozyriev_05_output.txt', 'w')
+fout = open('ip71_kozyriev_06_output.txt', 'w')
 A = []
 S = []
 
