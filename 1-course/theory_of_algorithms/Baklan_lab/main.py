@@ -1,27 +1,17 @@
-fin = open("data.csv", "r") #opening file with data
-fY = open("Y.txt", "w")
-fZ = open("Z.txt", "w")
-#initializing list X
-X = []
-count = 0
+#opening file with data
+fin, fY, fZ = open("data.csv", "r"), open("Y.txt", "w"), open("Z.txt", "w")
 
-#parsing the data file and adding to X list
-for line in fin.readlines():
-    buff = line.rstrip().split(',')
-    X.append(float(buff[1]))
+#initializing list X
+X = [float(line.rstrip().split(',')[1]) for line in fin.readlines()]
 
 #calculating the X_max and X_min
-X_max = max(X)
-X_min = min(X)
+X_max, X_min = max(X), min(X)
 
 #initializing the Y_max and Y_min
-Y_max = 5587.65
-Y_min = 16.3516
+Y_max, Y_min = 5587.65, 16.3516
 
 #initializing list Y
-Y = []
-for i in X:
-    Y.append(i * ((Y_max - Y_min) / (X_max - X_min)))
+Y = [i * ((Y_max - Y_min) / (X_max - X_min)) for i in X]
 
 #initializing list Y_tilda
 Y_tilda = [5587.65, 5274.41, 4978.31, 4698.64, 4434.92, 4186.111, 3951.71, 3729.31, 3520.00, 3322.44, 3135.96, 2959.96, 2793.83, 2637.21, 2489.21, 2349.32, 2217.46, 2093.00, 1975.53, 1864.66, 1760.00, 1661.22, 1567.98, 1479.98, 1396.91, 1318.51, 1244.51, 1174.66, 1108.73, 1046.50, 987.767, 932.328,
@@ -30,9 +20,7 @@ Y_tilda = [5587.65, 5274.41, 4978.31, 4698.64, 4434.92, 4186.111, 3951.71, 3729.
            21.8268, 20.6017, 19.4454, 18.3540, 17.3239, 16.3516]
 
 #copiyng values before changes
-Z = []
-for i in Y:
-    Z.append(i)
+Z = Y[:]
 
 for i, Zval in enumerate(Z):
     for j, Yt_val in enumerate(Y_tilda, -1):
@@ -41,7 +29,6 @@ for i, Zval in enumerate(Z):
                 Z[i] = Y_tilda[j]
             else:
                 Z[i] = Y_tilda[j+1]
-for i in Z:
-    fZ.write(str(i) + '\n')
-for i in Y:
-    fY.write(str(i) + '\n')
+                
+for i in Z: fZ.write('{0}\n'.format(i))
+for i in Y: fY.write('{0}\n'.format(i))
