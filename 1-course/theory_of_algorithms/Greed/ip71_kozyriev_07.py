@@ -1,40 +1,28 @@
 import math
 
 #reading data from file
-fin = open('input.txt', 'r')
-fout = open(' ip71_kozyriev_07_output.txt', 'w')
+fin, fout = open('input.txt', 'r'), open(' ip71_kozyriev_07_output.txt', 'w')
 
 n = int(fin.readline())
-data = []
 matrix = []
-for i in range (0, n):
-    buff = fin.readline().rstrip().split(' ')
-    data.append([int(buff[0]),int(buff[1])])
+
+data = [[int(line.rstrip().split(' ')[0]), int(line.rstrip().split(' ')[1])] for line in fin.readlines()[1:]]
 
 for i in data:
     row = []
-    x1 = i[0]
-    y1 = i[1]
+    x1, y1 = i[0], i[1]
     for j in data:
-        x2 = j[0]
-        y2 = j[1]
+        x2, y2 = j[0], j[1]
         length = math.sqrt((x2-x1)**2 + (y2 - y1)**2)
-        if length == 0.0:
-            row.append(math.inf)
-        else:
-            row.append(length)
+        if length == 0.0: row.append(math.inf)
+        else: row.append(length)
     matrix.append(row)
 
-visited = []
-visited.append(0)
-valid = [True] * len(matrix[0])
-valid[0] = False
-to_begin = []
+visited = [0]
+valid, valid[0] = [True] * len(matrix[0]), False
+to_begin = [i[0] for i in matrix]
 
-for i in matrix:
-    to_begin.append(i[0])
 way_length = 0
-
 def greed(point):
     global way_length
     for i in matrix[point]:
@@ -48,11 +36,9 @@ def greed(point):
             visited.append(index)
             greed(index)
 
-
 greed(0)
-way_length += to_begin[visited[len(visited)-1]]
-
-fout.write(str(way_length) + '\n')
+way_length += to_begin[visited[-1]]
+fout.write('{0}\n'.format(way_length))
 
 for i in visited:
-    fout.write(str(i) + ' ')
+    fout.write('{0} '.format(i))
