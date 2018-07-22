@@ -2,7 +2,7 @@
 fin, fY, fZ = open("data.csv", "r"), open("Y.txt", "w"), open("Z.txt", "w")
 
 #initializing list X
-X = [float(line.rstrip().split(',')[1]) for line in fin.readlines()]
+X = [float(line.rstrip().split(',')[1]) for line in fin]
 
 #calculating the X_max and X_min
 X_max, X_min = max(X), min(X)
