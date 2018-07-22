@@ -2,8 +2,7 @@ fin = open('input.txt', 'r')
 fout = open('ip71_kozyriev_05_output.txt', 'w')
 
 #reading data from file and adding to array
-n = int(fin.readline())
-A = [int(fin.readline()) for line in range(n)]
+A = [int(line) for line in list(fin)[1:]]
 
 #initializing heaps
 minHeap, maxHeap = [A[0]], []
@@ -37,7 +36,7 @@ def min_heapify(A, i):
 def build_min_heap(A):
     for i in range(len(A) // 2, -1, -1): min_heapify(A, i)
 
-for i in range(1, n):
+for i in range(1, len(A)):
     if A[i] >= minHeap[0]:
         minHeap.append(A[i])
         build_min_heap(minHeap)
