@@ -2,12 +2,9 @@ import math
 
 #reading data from file
 fin, fout = open('input.txt', 'r'), open(' ip71_kozyriev_07_output.txt', 'w')
+data = [[int(line.rstrip().split(' ')[0]), int(line.rstrip().split(' ')[1])] for line in list(fin)[1:]]
 
-n = int(fin.readline())
 matrix = []
-
-data = [[int(line.rstrip().split(' ')[0]), int(line.rstrip().split(' ')[1])] for line in fin][1:]
-
 for i in data:
     row = []
     x1, y1 = i[0], i[1]
