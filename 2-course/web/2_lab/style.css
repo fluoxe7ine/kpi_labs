@@ -1,0 +1,26 @@
+body {
+  background: #a687b9;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+  color: white;
+}
+
+table {
+  margin: auto;
+  empty-cells: show;
+  width: 50%;
+  table-layout: fixed;
+}
+
+td {
+  border: 2px solid white;
+  color: white;
+  height: 30px;
+}
+
+#table-3 tr:not(:first-child){
+  height: 40px;
+}
