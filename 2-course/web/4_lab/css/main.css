@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'Exo 2';
+  src: url(../fonts/Exo2.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: gray;
+  text-decoration: none;
+}
+
+#content {
+  display: grid;
+  font-family: 'Exo 2', sans-serif;
+  width: 80%;
+  margin: auto;
+}
+
+.menu {
+  grid-column: 1/4;
+  border-bottom: 1px solid #bebebe;
+  display: grid;
+  height: 5vw;
+}
+
+.menu h1 {
+  color: #bebebe;
+  grid-column: 1/2;
+  line-height: 4vw;
+  font-size: 2vw;
+}
+
+.menu > ul {
+  grid-column: 3/4;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-right: 2vw;
+  list-style: none;
+  font-size: 1.25vw;
+  margin-bottom: 0.5vw;
+}
+
+.menu > ul > li > a {
+  transition: all .5s ease;
+}
+
+.menu > ul > li > a:hover {
+  color: red;
+}
+
+.post {
+  grid-column: 1/4;
+  display: grid;
+  grid-gap: 10vw;
+  margin-top: 3%;
+  border-bottom: 1px solid #bebebe;
+  position: relative;
+  height: 60%;
+}
+
+.post .details {
+  grid-column: 1;
+}
+
+.post .details h2 a {
+  color: red;
+  font-size: 2.5vw;
+  transition: all .5s ease;
+}
+
+.post .details h2 a:hover {
+  color: gray;
+}
+
+.post .details p {
+  margin-top: 8%;
+  font-size: 1.15vw;
+}
+
+.post .details p a {
+  text-decoration: underline dotted;
+  transition: all .5s ease
+}
+
+.post .details p a:hover {
+  color: red;
+}
+
+.post .body {
+  grid-column: 2/4;
+  position: relative;
+}
+
+.post .body p {
+  font-size: 1.15vw;
+}
+
+.post .body:before {
+  content: '';
+  width: 1px;
+  height: 100%;
+  background: #bebebe;
+  position: absolute;
+  left: -5vw;
+}
+
+.cols {
+  margin-top: -5%;
+  display: grid;
+  grid-column: 1/4;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3vw;
+  grid-template-rows: minmax(21vw, auto);
+}
+
+.col h3 a{
+  transition: .5s ease;
+  font-size: 140%;
+}
+
+.col p {
+  margin-top: 7%;
+  line-height: 2vw;
+}
+
+.col p a {
+  color: red;
+  transition: all .5s ease;
+}
+
+.col p a:hover {
+  color: gray;
+}
+
+.col h3 a:hover {
+  color: red;
+}
+
+#footer {
+  grid-column: 1/4;
+  bottom: 0;
+  border-top: 1px solid #bebebe;
+}
+
+#footer p {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+#footer p a {
+  color: red;
+  transition: all .5s ease;
+}
+
+#footer p a:hover {
+  color: gray;
+}
+
+@media (max-width: 1024px ) {
+  #content {
+    width: 95%;
+  }
+
+  .cols {
+    grid-template-columns: 1fr;
+  }
+
+  .col p {
+    line-height: 4vw;
+  }
+
+  .cols .last {
+    margin-bottom: 3%;
+  }
+}
+
+@media (min-width: 1440px) {
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+  }
+}
