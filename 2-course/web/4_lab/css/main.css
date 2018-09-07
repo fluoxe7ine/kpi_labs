@@ -43,7 +43,7 @@
 }
 
 .menu > ul > li > a {
-  transition: all .5s ease;
+  transition: color .5s ease;
 }
 
 .menu > ul > li > a:hover {
@@ -67,7 +67,7 @@
 .post .details h2 a {
   color: red;
   font-size: 2.5vw;
-  transition: all .5s ease;
+  transition: color .5s ease;
 }
 
 .post .details h2 a:hover {
@@ -81,7 +81,7 @@
 
 .post .details p a {
   text-decoration: underline dotted;
-  transition: all .5s ease
+  transition: color .5s ease
 }
 
 .post .details p a:hover {
@@ -116,7 +116,7 @@
 }
 
 .col h3 a{
-  transition: .5s ease;
+  transition: color .5s ease;
   font-size: 140%;
 }
 
@@ -127,7 +127,7 @@
 
 .col p a {
   color: red;
-  transition: all .5s ease;
+  transition: color .5s ease;
 }
 
 .col p a:hover {
@@ -151,7 +151,7 @@
 
 #footer p a {
   color: red;
-  transition: all .5s ease;
+  transition: color .5s ease;
 }
 
 #footer p a:hover {
