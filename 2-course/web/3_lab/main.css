@@ -33,44 +33,62 @@ body {
 }
 
 .content .menu, .main, footer {
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px dashed rgb(228, 238, 96);
 }
 
 .content .menu {
     grid-column: 1;
-    grid-row: 1/8;
+    grid-row: 2/12;
 }
 
 .content nav.menu ul {
-    height: 90%;
+    height: 100%;
     width: 100%;
+    display: grid;
+    text-align: center;
 }
 
 .content nav.menu ul li {
-    height: 22.15%;
-    width: 100%;
+    grid-column: 1fr;
     list-style: none;
     font-size: 1.5vw;
     cursor: pointer;
     position: relative;
+    transition: background .5s ease;
+}
+
+.content nav.menu ul li:not(:last-child):after {
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+    content: '';
+    width: 80%;
+    height: 1%;
+    border-bottom: 2px dashed rgb(228, 238, 96);
 }
 
 .content nav.menu ul li a {
-    position: absolute;
-    top: 35%;
-    left: 35%;
+    position: relative;
+    text-align: center;
+    top: 35%; 
+    color: rgb(228, 238, 96);
 }
 
 .content nav.menu ul li:hover {
-    background: rgba(0, 0, 0, .7);
+    background: rgba(228, 238, 96, 0.5);
+}
+
+.content nav.menu ul li:hover a{
+    color: white;
 }
 
 .content .main {
     grid-column: 2/5;
-    grid-row: 1/8;
+    grid-row: 2/12;
 }
 
 .content footer {
     grid-column: 1/5;
-    grid-row: 8;
+    grid-row: 12/14;
 }
