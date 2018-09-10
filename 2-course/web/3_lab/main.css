@@ -1,94 +1,176 @@
-@font-face {
-    font-family: 'Exo2';
-    src: url('media/fonts/Exo2.ttf' );
+@font-face{
+    font-family: Exo2;
+    src: url(media/fonts/Exo2.ttf);
 }
 
-* {
+* { 
     margin: 0;
     padding: 0;
-    font-family: 'Exo2', sans-serif;
 }
 
 a {
-    color: black;
-    text-decoration: none;
     color: white;
+    text-decoration: none;
 }
 
 body {
-    background: url('media/img/wallpaper.jpg') no-repeat;
-    width: 100%;
-    height: 100%;
+    background-image: url(media/img/wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
+    font-family: Exo2, sans-serif;
 }
 
 .content {
     display: grid;
-    width: 80%;
-    left: 10%;
     position: absolute;
+    width: 80%;
     height: 100%;
-    grid-column-gap: 3%;
-    grid-row-gap: 3%; 
+    left: 10%;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: 2%;
+    grid-template-areas: 
+    ". . . ."
+    "menu main main main"
+    "menu main main main" 
+    "menu main main main" 
+    "menu main main main" 
+    "menu main main main" 
+    "menu main main main" 
+    "menu main main main" 
+    "menu main main main" 
+    "menu main main main" 
+    ". . . ."
+    "footer footer footer footer";
 }
 
-.content .menu, .main, footer {
-    background: rgba(0, 0, 0, 0.7);
-    border: 2px dashed rgb(228, 238, 96);
-}
-
-.content .menu {
-    grid-column: 1;
-    grid-row: 2/12;
-}
-
-.content nav.menu ul {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    text-align: center;
-}
-
-.content nav.menu ul li {
-    grid-column: 1fr;
-    list-style: none;
-    font-size: 1.5vw;
-    cursor: pointer;
+/*menu*/
+.menu {
+    grid-area: menu;
+    background: rgba(0, 0, 0, .7);
     position: relative;
+}
+
+.menu > ul {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+.menu > ul > li {
+    grid-area: menu-link;    
+    height: 20%;
+}
+
+.menu > ul > li.menu-active {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+.menu > ul > li > a {
+    display: block;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 1.55vw;
+    text-align: center;
+    line-height: 7vw;
     transition: background .5s ease;
 }
 
-.content nav.menu ul li:not(:last-child):after {
-    position: absolute;
-    bottom: 0%;
-    left: 10%;
-    content: '';
-    width: 80%;
-    height: 1%;
-    border-bottom: 2px dashed rgb(228, 238, 96);
-}
 
-.content nav.menu ul li a {
-    position: relative;
-    text-align: center;
-    top: 35%; 
+.menu > ul > li > a:hover {
+    background: rgba(255, 0, 0, 0.2);
     color: rgb(228, 238, 96);
 }
 
-.content nav.menu ul li:hover {
-    background: rgba(228, 238, 96, 0.5);
+.menu > ul > li:not(:last-child):after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    border-bottom: 2px dashed rgb(228, 238, 96);
 }
 
-.content nav.menu ul li:hover a{
+/*main*/
+.main {
+    grid-area: main;
+    background: rgba(0, 0, 0, .7);
+    overflow-y: scroll;
+}
+
+.main > img, video {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    height: auto;
+    margin-top: 5%;
+    background-attachment: fixed;
+}
+
+/*footer*/
+footer {
+    grid-area: footer;
+    background: rgba(0, 0, 0, .8);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+footer > p {
     color: white;
+    font-size: 1.15vw;
+    margin-top: 1%;
+    margin-left: 5%;
 }
 
-.content .main {
-    grid-column: 2/5;
-    grid-row: 2/12;
+footer > .links {
+    display: flex;
+    margin-left: 45%;
+    margin-top: 2%;
 }
 
-.content footer {
-    grid-column: 1/5;
-    grid-row: 12/14;
+footer > .links > a > .tg {
+    background: url(media/img/telegram.png);
+    width: 3vw;
+    height: 3vw;
+    background-position: center;
+    background-size: cover;
+    transition: background .5s ease;
+} 
+
+footer > .links > a > .tg:hover {
+    background: url(media/img/telegram_hover.png);
+    width: 3vw;
+    height: 3vw;
+    background-position: center;
+    background-size: cover;
+}
+
+
+footer > .links > a > .gh:hover {
+    background: url(media/img/github_hover.png);
+    width: 3vw;
+    height: 3vw;
+    background-position: center;
+    background-size: cover;
+}
+
+footer > .links > a > .gh {
+    background: url(media/img/github.png);
+    width: 3vw;
+    height: 3vw;
+    background-position: center;
+    background-size: cover;
+    transition: background .5s ease;
+} 
+
+footer > p > .wiki a {
+    color: red;
+} 
+
+footer > p > .wiki a:hover {
+    text-decoration: underline;
 }
