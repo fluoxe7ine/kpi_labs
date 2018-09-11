@@ -102,8 +102,7 @@ body {
 }
 
 .main > ol {
-    color: white;
-    list-style: square; 
+    color: white; 
     font-size: 3vw;
     margin-left: 10%;
 }
