@@ -107,13 +107,24 @@ body {
     margin-left: 10%;
 }
 
-.main > img, video {
+.main > img, video, table {
     width: 80%;
     position: relative;
     left: 10%;
     height: auto;
     margin-top: 5%;
     background-attachment: fixed;
+}
+
+td {
+    border: 2px solid white;
+    text-align: center;
+    color: white;
+    padding: 3%;
+}
+
+table {
+    margin-bottom: 10%;
 }
 
 .main > h1, h2, h3 {
