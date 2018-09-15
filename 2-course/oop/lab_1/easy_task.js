@@ -1,12 +1,5 @@
 'use strict';
 
-// +++ 10. Определить класс «Прямоугольник» с закрытым элементами a и b – стороны прямоугольника.
-// +++ Определить методы класса, обеспечивающие доступ к этим переменным. 
-// +++ Создать метод, определяющий площадь прямоугольника. Задать такие конструкторы для класса:
-// +++ конструктор инициализации с инициализацией данных при помощи передачи параметров (по умолчанию задавать прямоугольник со сторонами 2 и 4);
-// +++ конструктор копирования, принимающий в качестве параметра ссылку на объект класса «Прямоугольник», и создающий прямоугольник со сторонами, равными меньшей стороне копируемого объекта.
-// +++ Создать инициализированный статический массив указателей на прямоугольники и вывести площадь каждого прямоугольника на экран.
-
 class Rectangle {
 
     constructor () {
@@ -24,19 +17,19 @@ class Rectangle {
         }
         
         Rectangle.list.push(this);
-        this.setA = (value) => _a = value;
-        this.setB = (value) => _b = value;
-        this.getA = () => _a;
-        this.getB = () => _b;
+        this._setA = (value) => _a = value;
+        this._setB = (value) => _b = value;
+        this._getA = () => _a;
+        this._getB = () => _b;
     }
     
-    set a (value) {this.setA(value);}
-    set b (value) {this.setB(value);}
-    get a () {return this.getA();}
-    get b () {return this.getB();}
+    set a (value) {this._setA(value);}
+    set b (value) {this._setB(value);}
+    get a () {return this._getA();}
+    get b () {return this._getB();}
 
     get square() {
-        return this.getA() * this.getB();
+        return this._getA() * this._getB();
     }
 
 }
