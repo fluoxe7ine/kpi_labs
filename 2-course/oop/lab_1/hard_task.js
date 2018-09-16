@@ -1,14 +1,14 @@
 /** 
-* TODO: Класс должен содержать методы для шифровки и расшифровки текста по трем алгоритмам или более.
 * TODO: Сравнить время, затраченное на подбор ключей для разных методов.
 * TODO: Определить деструктор класса
 */
 
 const rl = require('readline-sync');
+const { PerformanceObserver, performance } = require('perf_hooks');
 
 class Crypto {
     constructor() {
-        let _t = rl.question('Type your message (or press Enter to default): ') || 'lorem ipsum dolor sit';
+        let _t = rl.question('Type your message (or press Enter to default): ') || 'lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit';
         let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
         this.encryptRot1 = () => {
@@ -66,8 +66,26 @@ class Crypto {
                 .join(' ');
             return encrMsg;
         };
+    }
 
+    benchmarkFn(fnEnc, fnDec) {
+        let start = performance.now();
+        let enc = fnEnc();
+        for (let i = 0; i < 10000; i++) {
+            fnDec(enc);
+        }
+        let finish = performance.now();
+        console.log(`Average ${fnDec.name} speed is ${((finish - start) / 1000).toFixed(3)} ms`);
+    }
+
+    benchmark() {
+        console.log('BENCHMARKING...');
+        this.benchmarkFn(this.encryptRot1, this.decryptRot1);
+        this.benchmarkFn(this.encryptAtbash, this.decryptAtbash);
+        this.benchmarkFn(this.encryptCaesar, this.decryptCaesar);
+        console.log('BENCHMARK FINISHED');
     }
 }
 
 let crypto = new Crypto();
+crypto.benchmark();
