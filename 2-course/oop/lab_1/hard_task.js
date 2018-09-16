@@ -23,7 +23,7 @@ class Crypto {
                 ).join(' ');
         };
 
-        this.encryptCaesar = (n) => {
+        this.encryptCaesar = (n = Math.floor(Math.random() * 26)) => {
             let text = _t.split(' ');
             let encryptedText = text
                 .map(word => word.split('')
@@ -46,13 +46,15 @@ class Crypto {
             return {encrMsg, n};
         };
 
+
+
     }
 }
 
 let crypto = new Crypto();
-let test = crypto.encryptCaesar(1);
+let test = crypto.encryptCaesar();
 console.log(test);
-// console.log(c1.decryptCaesar(test));
+console.log(crypto.decryptCaesar(test));
 let test2 = crypto.encryptRot1();
 console.log(test2);
 console.log(crypto.decryptRot1(test2));
