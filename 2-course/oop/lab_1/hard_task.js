@@ -46,15 +46,28 @@ class Crypto {
             return {encrMsg, n};
         };
 
+        this.encryptAtbash = () => {
+            let reverseAlphabet = alphabet.join('').split('').reverse();
+            let text = _t.split(' ');
+            let encryptedText = text
+                .map(word => word.split('')
+                    .map(letter => reverseAlphabet[alphabet.indexOf(letter)])
+                    .join(''))
+                .join(' ');
+            return encryptedText;
+        };
 
+        this.decryptAtbash =(encrMsg) => {
+            let reverseAlphabet = alphabet.join('').split('').reverse();
+            encrMsg = encrMsg.split(' ')
+                .map(word => word.split('')
+                    .map(letter => alphabet[reverseAlphabet.indexOf(letter)])
+                    .join(''))
+                .join(' ');
+            return encrMsg;
+        };
 
     }
 }
 
 let crypto = new Crypto();
-let test = crypto.encryptCaesar();
-console.log(test);
-console.log(crypto.decryptCaesar(test));
-let test2 = crypto.encryptRot1();
-console.log(test2);
-console.log(crypto.decryptRot1(test2));
