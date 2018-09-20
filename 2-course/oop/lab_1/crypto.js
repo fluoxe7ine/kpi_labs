@@ -1,3 +1,5 @@
+'use strict';
+
 const rl = require('readline-sync');
 const { PerformanceObserver, performance } = require('perf_hooks');
 
