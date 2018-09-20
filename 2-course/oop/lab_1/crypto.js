@@ -6,11 +6,11 @@ const { PerformanceObserver, performance } = require('perf_hooks');
 class Crypto {
     constructor() {
         let _t = rl.question('Type your message (or press Enter to default): ') || 'lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit';
-        let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+        let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+            '1', '2', '3', '4', '5' ,'6', '7', '8', '9', '0', '!', '@', '#', '$', ';', ':', '"', '^', '&', '*', '(', ')'];
 
-        this.encryptRot1 = () => {
-            return this.encryptCaesar(1);
-        };
+        this.encryptRot1 = () => this.encryptCaesar(1);
 
         this.decryptRot1 = (encrMsg) => {
             return encrMsg.split(' ')
@@ -85,4 +85,7 @@ class Crypto {
 }
 
 let crypto = new Crypto();
+// console.log(`Encoded: ${crypto.encryptCaesar()}`);
+// console.log(`Key: ${crypto.decryptCaesar(crypto.encryptCaesar()).n} 
+// Decoded: ${crypto.decryptCaesar(crypto.encryptCaesar()).encrMsg}`);
 crypto.benchmark();
