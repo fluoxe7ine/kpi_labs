@@ -33,7 +33,16 @@ namespace lab2_c
                 Console.WriteLine();
             }
         }
-
+        
+        public static Matrix operator ~(Matrix m) {
+           for (int i = 0; i < m.m; i++) {
+               for (int j = 0; j < m.n; j++) {
+                   Console.Write($"{m.matrix[i,j].fract_value} ");
+               }
+               Console.WriteLine();
+           }
+           return m;
+        } 
         public static Matrix operator +(Matrix m1, Matrix m2) {
             Matrix result = new Matrix(m1.m, m1.n);
             for (int i = 0;  i < m1.m; i++) {

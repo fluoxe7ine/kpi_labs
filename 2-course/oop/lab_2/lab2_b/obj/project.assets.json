@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_a/lab2.csproj",
+      "projectUniqueName": "/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_b/lab2.csproj",
       "projectName": "lab2",
-      "projectPath": "/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_a/lab2.csproj",
+      "projectPath": "/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_b/lab2.csproj",
       "packagesPath": "/home/fluoxetine/.nuget/packages/",
-      "outputPath": "/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_a/obj/",
+      "outputPath": "/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_b/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"

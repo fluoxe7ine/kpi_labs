@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8_lab</title>
+</head>
+<body>
+
+    <style>
+    
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);            
+        }
+    }
+
+     @keyframes backrotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(-360deg);            
+        }
+    }
+
+    .wrap-15 {
+        width: 200px;
+        display: inline-block;
+    }
+
+    .rotate {
+        animation-duration: 1s;
+        animation-name: rotate;
+        animation-iteration-count: infinite;
+    }
+
+    .backrotate {
+        animation-duration: 1s;
+        animation-name: backrotate;
+        animation-iteration-count: infinite;
+    }
+
+    </style>
+
+    <h1>Лабораторна робота 8</h1>
+    <h2>Завдання-1</h2>
+    <form>
+        x1: <input id="x1" type="text"><br>
+        y1: <input id="y1" type="text"><br>
+        x2: <input id="x2" type="text"><br>
+        y2: <input id="y2" type="text"><br>
+        x3: <input id="x3" type="text"><br>
+        y3: <input id="y3" type="text"><br>
+        result: <input onfocus="getTriangleSquare()" id="result-1" type="text">
+    </form>
+    <h2>Завдання-2</h2>
+    <form>
+        first input: <input id="t2-input-1" type="text">
+        second input: <input id="t2-input-2" type="text">
+        result: <input onblur="swapFields()" id="t2-result" type="text">
+    </form>
+    <h2>Завдання-3</h2>
+    <form>
+        input: <input onblur="calculateMaxCount()" id="t3-input" type="text"><br>
+        result: <p id="t3-result"></p>
+    </form>
+    <h2>Завдання-4</h2>
+        a: <input type="text" id="t4-input-1">
+        b: <input type="text" id="t4-input-2">
+        c: <input type="text" id="t4-input-3">
+        <input type="button" value="submit" onclick="checkTriangle()"><br>
+        result: <p id="t4-result"></p>
+    <h2>Завдання-5</h2>
+        <img onmouseover="scaleImage()" onmouseout="goToDefault()" id="t5" width="300" height="400" src="https://i.pinimg.com/originals/99/59/1b/99591bbc318ecd41ae7bbf39a9106e12.jpg">
+    <h2>Завдання-6</h2>
+        <div style="position: relative;" id="wrap-6"><hr></div>
+        <input onclick="makeMove('top')" type="button" value="up">
+        <input onclick="makeMove('bot')" type="button" value="down">
+        <input onclick="makeMove('left')" type="button" value="left">
+        <input onclick="makeMove('right')" type="button" value="right">
+        <input onclick="makeMove('width+')" type="button" value="width++">
+        <input onclick="makeMove('width-')" type="button" value="width--">
+
+    <h2>Завдання-7</h2>
+    <!-- TODO: -->
+    <h2>Завдання-8</h2>
+    <!-- TODO: -->
+    <h2>Завдання-9</h2>
+    <!-- TODO: -->
+    <h2>Завдання-10</h2>
+        <input id="t10" type="text">
+        <input onclick="reverse()" type="submit" value="sumbit">
+        <br>result: <p id="t10-result"></p>
+    <h2>Завдання-11</h2>
+        <input id="t11" type="text">
+        <input onclick="dividersCount()" type="submit" value="sumbit">
+        <br>result: <p id="t11-result"></p>
+    <h2>Завдання-12</h2>
+    <!-- TODO: -->
+    <h2>Завдання-13</h2>
+    <!-- TODO: -->
+    <h2>Завдання-14</h2>
+        <input id="t14" type="text"><br>
+        <input type="submit" onclick="wordCounter()" value="submit">
+        result: <p id="t14-result"></p>
+    <h2>Завдання-15</h2>
+        <div class="wrap-15"><img src="https://i.pinimg.com/originals/99/59/1b/99591bbc318ecd41ae7bbf39a9106e12.jpg" width="200" height="200"></div>
+        <div class="wrap-15"><img src="https://i.pinimg.com/originals/99/59/1b/99591bbc318ecd41ae7bbf39a9106e12.jpg" width="200" height="200"></div>
+        <div class="wrap-15"><img src="https://i.pinimg.com/originals/99/59/1b/99591bbc318ecd41ae7bbf39a9106e12.jpg" width="200" height="200"></div>
+        <div class="wrap-15"><img src="https://i.pinimg.com/originals/99/59/1b/99591bbc318ecd41ae7bbf39a9106e12.jpg" width="200" height="200"></div>
+        <div class="wrap-15"><img src="https://i.pinimg.com/originals/99/59/1b/99591bbc318ecd41ae7bbf39a9106e12.jpg" width="200" height="200"></div>
+        <div class="wrap-15"><img src="https://i.pinimg.com/originals/99/59/1b/99591bbc318ecd41ae7bbf39a9106e12.jpg" width="200" height="200"></div>
+    <h2>Завдання-16</h2>
+    <!-- TODO: -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>

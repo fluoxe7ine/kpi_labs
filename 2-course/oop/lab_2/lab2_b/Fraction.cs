@@ -1,6 +1,6 @@
 using System;
 
-namespace lab2_a
+namespace lab2_b
 {
     class Fraction : ICloneable
     {
