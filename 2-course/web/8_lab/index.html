@@ -9,7 +9,12 @@
 <body>
 
     <style>
-    
+    td {
+        width: 100px;
+        height: 100px;
+    }
+
+
     @keyframes rotate {
         from {
             transform: rotate(0deg);
@@ -89,11 +94,67 @@
         <input onclick="makeMove('width-')" type="button" value="width--">
 
     <h2>Завдання-7</h2>
-    <!-- TODO: -->
+        <select id="t7-course">
+            <option value="math">Math</option>
+            <option value="javascript">Javascript</option>
+            <option value="cplusplus">C++</option>
+        </select>
+        <select id="t7-duration">
+            <option value="half">30 min</option>
+            <option value="hour">Hour</option>
+            <option value="two">Two hours</option>
+        </select>
+        <select id="t7-language">
+            <option value="en">English</option>
+            <option value="ukr">Ukrainian</option>
+            <option value="ru">Russian</option>
+        </select>
+        <input onclick="calculateCourse()" type="submit" value="Submit course"><br>
+        result: <p id="res-7"></p>
+
     <h2>Завдання-8</h2>
-    <!-- TODO: -->
+        <input onclick="changeTableBg()" type="submit" value="Change table color">
+        <table id="t8" border="1">
+            <tr>
+                <td onclick="changeTdBg(0)"></td>
+                <td onclick="changeTdBg(1)"></td>
+                <td onclick="changeTdBg(2)"></td>
+            </tr>
+            <tr>
+                <td onclick="changeTdBg(3)"></td>
+                <td onclick="changeTdBg(4)"></td>
+                <td onclick="changeTdBg(5)"></td>
+            </tr>
+            <tr>
+                <td onclick="changeTdBg(6)"></td>
+                <td onclick="changeTdBg(7)"></td>
+                <td onclick="changeTdBg(8)"></td>
+            </tr>
+        </table>
     <h2>Завдання-9</h2>
-    <!-- TODO: -->
+        <select id="t9-1">
+            <option value="milk">Milk</option>
+            <option value="wine">Wine</option>
+            <option value="beer">Beer</option>
+        </select>
+        <input id="t9-count-1" type="text"><br>
+
+        <select id="t9-2">
+            <option value="milk">Milk</option>
+            <option value="wine">Wine</option>
+            <option value="beer">Beer</option>
+        </select>
+        <input id="t9-count-2" type="text"><br>
+
+        <select id="t9-3">
+            <option value="milk">Milk</option>
+            <option value="wine">Wine</option>
+            <option value="beer">Beer</option>
+        </select>
+        <input id="t9-count-3" type="text"><br>
+
+        <input onclick="calculatePrice()" type="submit" value="sumbit">
+        result: <p id="res-9"></p>
     <h2>Завдання-10</h2>
         <input id="t10" type="text">
         <input onclick="reverse()" type="submit" value="sumbit">
@@ -103,9 +164,12 @@
         <input onclick="dividersCount()" type="submit" value="sumbit">
         <br>result: <p id="t11-result"></p>
     <h2>Завдання-12</h2>
-    <!-- TODO: -->
+    Lucky numbers for length 6:
+    <p id="t12"></p>
     <h2>Завдання-13</h2>
-    <!-- TODO: -->
+        <input type="date" name="date" id="t13"><br/>
+        <input onclick="calculateWeek()" type="submit" value="submit">
+        result: <p id="res-13"></p>
     <h2>Завдання-14</h2>
         <input id="t14" type="text"><br>
         <input type="submit" onclick="wordCounter()" value="submit">
@@ -118,8 +182,9 @@
         <div class="wrap-15"><img src="https://i.pinimg.com/originals/99/59/1b/99591bbc318ecd41ae7bbf39a9106e12.jpg" width="200" height="200"></div>
         <div class="wrap-15"><img src="https://i.pinimg.com/originals/99/59/1b/99591bbc318ecd41ae7bbf39a9106e12.jpg" width="200" height="200"></div>
     <h2>Завдання-16</h2>
-    <!-- TODO: -->
-
+        <input id="t16" type="text"><br/>
+        <input type="submit" value="submit" onclick="validateEmail()">
+        result: <p id="res-16"></p>
   <script src="script.js"></script>
 
 </body>
