@@ -232,7 +232,7 @@ function wordCounter() {
     let text = document.getElementById('t14').value;
     let res = document.getElementById('t14-result');
 
-    if (text != '') res.innerHTML = text.replace(/  +/g, ' ').split(' ').length;
+    if (text != '') res.innerHTML = text.trim().replace(/  +/g, ' ').split(' ').length;
     else res.innerHTML = '0';
 }
 
