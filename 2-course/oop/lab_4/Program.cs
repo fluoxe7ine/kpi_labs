@@ -19,19 +19,23 @@ namespace lab_4
             Sort<Date> sort3 = new Sort<Date>(d1, d2, d3, d4);
             Sort<Time> sort4 = new Sort<Time>(t1, t2, t3, t4);
             sort3.sortArray();
+            Console.Write("Відсортовані дати: ");
             for (int i = 0; i < sort.data.Length; i++) {
                 Console.Write(sort3.data[i].day + "/" + sort3.data[i].month + "/" + sort3.data[i].year + " ");
             }
             Console.WriteLine();
             
             sort4.sortArray();
+            Console.Write("Відсортований час: ");
             for (int i = 0; i < sort.data.Length; i++) {
                 Console.Write(sort4.data[i].hours + ":" + sort4.data[i].minutes + " ");
             }
             Console.WriteLine();
             sort.sortArray();
+            Console.Write("Відсортовані числа: ");
             sort.showArray();
             sort2.sortArray();
+            Console.Write("Відсортовані рядки: ");
             sort2.showArray();
         }
     }

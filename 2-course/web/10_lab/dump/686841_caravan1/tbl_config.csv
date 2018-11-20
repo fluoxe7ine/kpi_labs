@@ -1,0 +1,20 @@
+config_id,config_value,config_notes
+fb_app_id,NULL,<blank>
+gallery_photos_per_page,48,<blank>
+link_amazon,NULL,<blank>
+link_applemusic,NULL,<blank>
+link_facebook,https://www.facebook.com/JOEDURSOandSTONECARAVAN/,<blank>
+link_google,NULL,<blank>
+link_instagram,https://www.instagram.com/caravanmanagement,<blank>
+link_snapchat,NULL,<blank>
+link_soundcloud,NULL,<blank>
+link_spotify,NULL,<blank>
+link_twitter,https://twitter.com/joedursocbgb,<blank>
+link_youtube,NULL,<blank>
+management_tel,845-721-0962,<blank>
+paypal_email,jdcaravan@gmail.com,<blank>
+site_img_src,images/main-image.jpg,<blank>
+site_name,Joe D'Urso & Stone Caravan,<blank>
+site_shortcut_icon,images/main-icon.jpg,<blank>
+site_url,http://www.jdcaravan.com,<blank>
+

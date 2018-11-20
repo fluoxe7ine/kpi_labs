@@ -1,0 +1,12 @@
+menu_id,menu_hide_flag,menu_url,menu_sort,menu_level,menu_title,menu_target,menu_parent
+1,0,/,10,0,Home,_top,0
+2,0,tour.php,20,0,Tour,_top,0
+7,0,/#home-news,40,0,News,_top,0
+8,0,links.php,90,0,Links,_top,0
+9,0,store.php,30,0,Store,_top,0
+10,0,contact.php,200,0,Contact,_top,0
+23,0,bio.php,60,0,Bio,_top,0
+24,0,press-kit.php,100,0,Press Kit,_top,0
+25,0,video.php,70,0,Video,_top,0
+26,0,photos.php,80,0,Photos,_top,0
+

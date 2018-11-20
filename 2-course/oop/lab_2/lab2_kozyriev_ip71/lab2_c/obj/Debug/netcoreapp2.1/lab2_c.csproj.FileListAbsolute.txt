@@ -1,0 +1,11 @@
+/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_c/bin/Debug/netcoreapp2.1/lab2_c.deps.json
+/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_c/bin/Debug/netcoreapp2.1/lab2_c.runtimeconfig.json
+/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_c/bin/Debug/netcoreapp2.1/lab2_c.runtimeconfig.dev.json
+/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_c/bin/Debug/netcoreapp2.1/lab2_c.dll
+/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_c/bin/Debug/netcoreapp2.1/lab2_c.pdb
+/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_c/obj/Debug/netcoreapp2.1/lab2_c.csprojAssemblyReference.cache
+/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_c/obj/Debug/netcoreapp2.1/lab2_c.csproj.CoreCompileInputs.cache
+/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_c/obj/Debug/netcoreapp2.1/lab2_c.AssemblyInfoInputs.cache
+/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_c/obj/Debug/netcoreapp2.1/lab2_c.AssemblyInfo.cs
+/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_c/obj/Debug/netcoreapp2.1/lab2_c.dll
+/home/fluoxetine/Documents/programming/kpi_labs/2-course/oop/lab_2/lab2_c/obj/Debug/netcoreapp2.1/lab2_c.pdb
