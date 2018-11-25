@@ -9,7 +9,7 @@
             private int n;
             public Fraction[,] matrix;
             public Matrix (int width, int height) {
-                if (width <= 0 || height <= 0) throw new InitException("Invalid initialize data exception");
+                if (width <= 0 || height <= 0) throw new InitException("Invalid initialize data exception in Matrix class");
                 m = width;
                 n = height;
                 matrix = new Fraction[m, n];
@@ -186,7 +186,7 @@
             }
 
             public static Matrix operator *(Matrix m1, Matrix m2) {
-                if (m1.m != m2.n || m1.n != m2.m) throw new ProblemException("Invalid data for matrix multiplying");
+                if (m1.m != m2.m || m1.n != m2.n) throw new ProblemException("Matrix should have equal size");                
                 Matrix result = new Matrix(m1.m, m1.n);
                 for (int i = 0;  i < m1.m; i++) {
                     for (int j = 0; j < m1.n; j++) {

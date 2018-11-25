@@ -7,11 +7,11 @@ namespace lab2_c
     {
         public BigInteger bignum;
         public Bignum_arithmetic(string number) {
-            if (BigInteger.TryParse(number, out bignum) == false) throw new InitException("Invalid initialize data exception");
+            if (BigInteger.TryParse(number, out bignum) == false) throw new BignumInitException("Invalid initialize data exception in Bignum class");
         }
 
         public Bignum_arithmetic(BigInteger number) {
-            if (number.GetType() != typeof(BigInteger)) throw new InitException("Invalid initialize data exception");
+            if (number.GetType() != typeof(BigInteger)) throw new BignumInitException("Invalid initialize data exception in Bignum class");
             bignum = number;
         }
 

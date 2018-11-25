@@ -8,7 +8,7 @@ namespace lab2_c
         static void Main(string[] args)
         {
             try {
-                Matrix matrix1 = new Matrix(3, 5);
+                Matrix matrix1 = new Matrix(3, 0);
                 Bignum_arithmetic ba1 = new Bignum_arithmetic("10");
                 Matrix matrix2 = new Matrix(3, 5);
                 Fraction fa1 = new Fraction("-213/1");
@@ -16,6 +16,12 @@ namespace lab2_c
                 matrix2.fillMatrix();
                 Matrix matrix3 = 5 + matrix1 + matrix2 / ba1 * fa1 * 1000;
                 Matrix show = ~matrix3;
+            }
+            catch (BignumInitException ie) {
+                Console.WriteLine(ie.Message);
+            }
+            catch (MatrixInitException ie) {
+                Console.WriteLine(ie.Message);
             }
             catch (InitException ie) {
                 Console.WriteLine(ie.Message);
