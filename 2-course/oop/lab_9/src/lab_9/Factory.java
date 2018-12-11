@@ -21,13 +21,11 @@ public class Factory {
 	}
 	
 	public String toString() {
-		String data = String.format("%15s", registration_id) +
-					  String.format("%30s", name) + 
-					  String.format("%20s", model) +
-					  String.format("%10d", count) +
-					  String.format("%10s", firm_name) +
-					  String.format("%15f", price) +
-					  String.format("%15s", date);
+//		String data = String.format()
+		String data = String.format(
+				"%15s%30s%20s%10d%10s%15f%15s", 
+				registration_id, name, model, count, firm_name, price, date
+		);
 		return data;
 	}
 }

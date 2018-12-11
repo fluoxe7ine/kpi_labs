@@ -59,7 +59,7 @@ public class Text {
 		int count = 1;
 		if (word.length() < k) return word;
 		for (int i = 0; i < word.length(); i++) {
-			if (count % k == 0 && word.toCharArray()[i] != '.' && word.toCharArray()[i] != '\n') {
+			if (count % k == 0 && word.toCharArray()[i] != '.' && word.toCharArray()[i] != '\n' && word.toCharArray()[i] != '-' && word.toCharArray()[i] != ',') {
 				newWord += symbol;
 			} else newWord += word.toCharArray()[i];
 			count++;

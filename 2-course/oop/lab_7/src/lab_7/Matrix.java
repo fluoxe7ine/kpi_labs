@@ -42,7 +42,7 @@ public class Matrix {
 			}
 		}
 		
-		System.out.println("Max value: " + max + " " + "Column number: " + column_number);
+		System.out.println("Max value: " + max + " " + "Column index: " + column_number);
 		
 		for (int i = 0; i < data.length; i++) {
 			int q = 0;
