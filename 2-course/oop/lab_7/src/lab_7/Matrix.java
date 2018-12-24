@@ -2,7 +2,7 @@ package lab_7;
 import java.util.Random;
 
 public class Matrix {
-	public short data[][];
+	private short data[][];
 	
 	public Matrix(int n) {
 		data = new short[n][n];
